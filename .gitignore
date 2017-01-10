@@ -1,5 +1,4 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
+*.DS_Store
 # dependencies
 node_modules
 
@@ -9,7 +8,6 @@ coverage
 # production
 build
 
-# misc
-.DS_Store
-.env
-npm-debug.log
+# Logs
+logs
+*.log
