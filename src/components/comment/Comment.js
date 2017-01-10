@@ -8,7 +8,7 @@ const Comment = (props) => {
     <div className="Comment">
       <div className="title">
         <img src={props.comment.user.avatar_url} alt={props.comment.user.login}/>
-        <span><strong>{props.comment.user.login}</strong> commented ({props.comment.created_at}):</span>
+        <span><strong>{props.comment.user.login}</strong> commented at {props.comment.created_at}:</span>
       </div>
       <div className="body">{ReplaceLineBreaks(props.comment.body)}</div>
     </div>
