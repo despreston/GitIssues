@@ -1,0 +1,78 @@
+.IssueListItem {
+	display: flex;
+	align-items: center;
+	border: 0.1em solid #ddd;
+	border-radius: 0.2em;
+	height: 70px;
+	padding: 0em 1em;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.IssueListItem:hover {
+	background-color: #fafafa;
+}
+
+div.IssueListItem .IssueListItemWrapper {
+	flex: 1;
+}
+
+div.IssueListItem .title {
+	color: #333;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+div.IssueListItem .title:hover {
+	color: #00648D;
+	cursor: pointer;
+}
+
+div.IssueListItem .number {
+	color: #888;
+	font-size: 0.8em;
+	margin-left: .6em;
+}
+
+div.IssueListItem .user {
+	align-items: center;
+	color: #888;
+	display: flex;
+	font-size: 0.8em;
+}
+
+div.IssueListItem .user span {
+	margin-right: 5px;
+}
+
+div.IssueListItem .user img {
+	width: 40px;
+	height: 40px;
+}
+
+div.IssueListItem .second-row .body {
+	color: #888;
+	font-size: 0.8em;
+	line-height: 2.0em;
+	text-overflow: ellipsis;
+}
+
+div.IssueListItem .second-row {
+	position: relative;
+}
+
+div.IssueListItem .second-row:after {
+	content: "";
+	pointer-events: none;
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 40%;
+	height: 1.5em;
+  background: linear-gradient(to left, rgba(255, 255, 255, 1) 40%, rgba(255, 255, 255, 0));
+}
+
+.IssueListItem:hover .second-row:after{
+	background: linear-gradient(to left, rgba(250, 250, 250, 1), rgba(250, 250, 250, 0));
+}

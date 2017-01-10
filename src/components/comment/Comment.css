@@ -1,0 +1,24 @@
+.Comment {
+	color: #333;
+	border: 0.1em solid #ddd;
+	border-radius: .2em;
+	font-size: 0.9em;
+}
+
+div.Comment .title {
+	display: flex;
+	align-items: center;
+	background-color: #fafafa;
+	border-bottom: 0.1em solid #ddd;
+	height: 40px;
+}
+
+div.Comment .title img {
+	margin: 0em 0.5em;
+	height: 35px;
+	width: 35px;
+}
+
+div.Comment .body {
+	padding: 1.0em;
+}

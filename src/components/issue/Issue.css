@@ -1,0 +1,54 @@
+.Issue {
+	text-align: left;
+	padding: 2em 5em;
+}
+
+.Issue h1 {
+	font-size: 30px;
+	margin-top: 2em;
+}
+
+div.Issue > .body {
+	border: 1px solid #ccc;
+	border-radius: 0.2em;
+	color: #333;
+	font-size: 0.9em;
+	line-height: 1.25;
+	margin: 1em 0em;
+	min-height: 200px;
+	padding: 0.7em;
+}
+
+div.Issue .navigation {
+	color: #4076BD;
+	cursor: pointer;
+	float: left;
+	font-size: 0.9em;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+}
+
+div.Issue .status {
+	color: #333;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin-right: 1em;
+}
+
+div.Issue .subheader .user {
+	display: flex;
+	align-items: center;
+	float: right;
+	position: relative;
+	bottom: 2em;
+	color: #333;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+div.Issue .subheader .user img {
+	margin-left: 1em;
+	height: 60px;
+	width: 60px;
+}

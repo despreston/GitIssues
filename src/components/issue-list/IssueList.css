@@ -1,0 +1,18 @@
+.IssueList {
+	padding-top: 2em;
+	padding-bottom: 3em;
+}
+
+div.IssueList li {
+	margin-top: 20px;
+}
+
+div.IssueList ul {
+	list-style-type: none;
+	margin: 1em 3em;
+	padding: 0;
+}
+
+div.IssueList .navigation a{
+	margin-right: 2em;
+}
