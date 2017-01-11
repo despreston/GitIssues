@@ -7,17 +7,15 @@ import Issue from './components/issue/Issue';
 import IssueList from './components/issue-list/IssueList';
 
 window.CONFIG = {
-  owner: "rails",
-  repo: "rails"
+  owner: 'rails',
+  repo: 'rails'
 };
 
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="issues">
-        <IndexRoute component={IssueList} />
-        <Route path=":page" component={IssueList} />
-      </Route>
+      <IndexRoute component={IssueList} />
+      <Route path=":page" component={IssueList} />
       <Route path="issue/:number" component={Issue} />
     </Route>
   </Router>

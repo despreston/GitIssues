@@ -6,19 +6,20 @@ import { Link } from 'react-router';
 import IssueLabel from '../issue-label/IssueLabel';
 import './IssueListItem.css';
 
-const IssueListItem = (props) => {
+function IssueListItem (props) {
   const issue = props.issue;
 
   // Summary of issue body. Starting with first 140 chars
   // ending on a clean line or word.
-  function getIssueSummary() {
-    let summary = issue.body.substring(0, 141);
+  function getIssueSummary () {
+    const summary = issue.body.substring(0, 141);
+
     for (let i = 139; i > 0; i--) {
       if (summary[i] === '.' || summary[i] === ' ') {
         return summary.substring(0, i);
       }
     }
-    return "";
+    return '';
   }
 
   return (
@@ -42,8 +43,8 @@ const IssueListItem = (props) => {
         <img alt={issue.user.login} src={issue.user.avatar_url}/>
       </span>
     </div>
-  )
-};
+  );
+}
 
 IssueListItem.propTypes = {
   issue: PropTypes.object.isRequired

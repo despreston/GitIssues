@@ -3,7 +3,6 @@
  */
 import React from 'react';
 
-export const ReplaceLineBreaks = (text) => {
-	return text.split("\n").map((item, idx) => <span key={idx}>{item}<br /></span>);
-};
-
+export function ReplaceLineBreaks (text) {
+  return text.split('\n').map((item, idx) => <span key={idx}>{item}<br /></span>);
+}

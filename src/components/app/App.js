@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
-  render() {
+  static propTypes = {
+    children: React.PropTypes.node
+  };
+
+  render () {
     return (
       <div className="App">
         <div className="App-header">
