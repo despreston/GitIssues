@@ -7,8 +7,8 @@ import { Link } from 'react-router';
 
 // Components 
 import IssueLabel from '../issue-label/IssueLabel';
-import { ReplaceLineBreaks } from '../../helpers';
 import CommentList from '../comment-list/CommentList';
+import { StringReplace } from '../../helpers';
 
 // Styles
 import './Issue.css';
@@ -47,6 +47,21 @@ export default class Issue extends Component {
       .catch(err => console.log('Failed to load comments. ', err));
   }
 
+  // Replace line breaks and @ mentions
+  transformText (text) {
+    // Replace line breaks
+    text = StringReplace(text, /(\n)/g, (match, i) => (
+      <span key={ match + i }><br /></span>
+    ));
+
+    // Replace @ mentions with links 
+    text = StringReplace(text, /@(\w+)/g, (match, i) => (
+      <a key={match + i} href={`https://github.com/${match}`}>@{match}</a>
+    ));
+
+    return text;
+  }
+
   render () {
     if (this.state.issue) {
       const issue = this.state.issue;
@@ -65,7 +80,7 @@ export default class Issue extends Component {
               <img alt={issue.user.login} src={issue.user.avatar_url}/>
             </span>
           </div>
-          <div className="body">{ReplaceLineBreaks(issue.body)}</div>
+          <div className="body">{this.transformText(issue.body)}</div>
           {this.state.comments ? <CommentList comments={this.state.comments}/> : null}
         </div>
       );
