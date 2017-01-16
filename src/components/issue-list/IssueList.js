@@ -36,9 +36,9 @@ export default class IssueList extends Component {
     return (
       <div className="IssueList">
         <div className="navigation">
-          <Link to="/issues/1">First</Link>
-          {this.props.params.page > 1 ? <Link to={`/issues/${this.props.params.page-1}`}>Previous</Link> : null}
-          <Link to={`/issues/${parseInt(this.props.params.page,10) ? parseInt(this.props.params.page,10)+1 : 2}`}>Next</Link>
+          <Link to="/1">First</Link>
+          {this.props.params.page > 1 ? <Link to={`/${this.props.params.page-1}`}>Previous</Link> : null}
+          <Link to={`/${parseInt(this.props.params.page,10) ? parseInt(this.props.params.page,10)+1 : 2}`}>Next</Link>
         </div>
         <ul>
           {
@@ -52,9 +52,9 @@ export default class IssueList extends Component {
           }
         </ul>
         <div className="navigation">
-          <Link to="/issues/1">First</Link>
-          {this.props.params.page > 1 ? <Link to={`/issues/${this.props.params.page-1}`}>Previous</Link> : null}
-          <Link to={`/issues/${parseInt(this.props.params.page,10) ? parseInt(this.props.params.page,10)+1 : 2}`}>Next</Link>
+          <Link to="/1">First</Link>
+          {this.props.params.page > 1 ? <Link to={`/${this.props.params.page-1}`}>Previous</Link> : null}
+          <Link to={`/${parseInt(this.props.params.page,10) ? parseInt(this.props.params.page,10)+1 : 2}`}>Next</Link>
         </div>
       </div>
     );
